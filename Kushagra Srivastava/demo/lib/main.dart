@@ -80,10 +80,10 @@ class NavBar extends StatelessWidget {
                 icon: LineIcons.home,
                 text: 'Home',
               ),
-              // GButton(
-              //   icon: LineIcons.heart,
-              //   text: 'Likes',
-              // ),
+              GButton(
+                icon: LineIcons.heart,
+                text: 'Likes',
+              ),
               GButton(
                 icon: LineIcons.search,
                 text: 'Search',
@@ -181,10 +181,10 @@ class Body extends StatelessWidget {
           buildCardsv2('assets/img/icon/icon6.jpg'),
           buildCardsv2('assets/img/icon/icon7.jpg'),
           buildCardsv2('assets/img/icon/icon8.jpg'),
-          buildCardsv2('assets/img/icon/icon12.jpg'),
+          buildCardsv2('assets/img/icon/icon9.jpg'),
           buildCardsv2('assets/img/icon/icon10.jpg'),
           buildCardsv2('assets/img/icon/icon11.jpg'),
-          buildCardsv2('assets/img/icon/icon9.jpg'),
+          buildCardsv2('assets/img/icon/icon12.jpg'),
         ]);
   }
 }
