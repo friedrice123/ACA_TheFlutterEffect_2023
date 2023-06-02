@@ -3,7 +3,9 @@ import 'package:assignment_1/provider_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'Animations.dart';
 import 'LargeText.dart';
+import 'NavBarPage.dart';
 
 class FavPage extends StatefulWidget {
   const FavPage({super.key});
@@ -26,12 +28,22 @@ class _FavPageState extends State<FavPage> {
         toolbarHeight: pageHeight / 10,
         backgroundColor: const Color.fromARGB(255, 211, 198, 237),
         elevation: 0,
-        title: const Center(
-          child: LargeText(
-              mySize: 35,
-              myText: "Liked",
-              myColor: Color.fromRGBO(81, 19, 103, 1),
-              myFontWeight: FontWeight.bold),
+        centerTitle: true,
+        title: const LargeText(
+            mySize: 35,
+            myText: "Liked",
+            myColor: Color.fromRGBO(81, 19, 103, 1),
+            myFontWeight: FontWeight.bold),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon:
+                  const Icon(Icons.menu, color: Color.fromRGBO(81, 19, 103, 1)),
+              onPressed: () {
+                Navigator.push(context, FadeRoute(page: const NavBarPage()));
+              },
+            );
+          },
         ),
       ),
       body: ListView(children: favWidget.toSet().toList()),
