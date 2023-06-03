@@ -1,3 +1,4 @@
+import 'package:assignment_1/NavBarPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';
@@ -33,6 +34,11 @@ class _MyChatListState extends State<MyChatList> {
     );
 
     _addMessage(textMessage);
+
+    if (textMessage.text.toLowerCase() == 'steve' ||
+        textMessage.text.toLowerCase() == 'steve jobs') {
+      Navigator.push(context, FadeRoute(page: const NavBarPage()));
+    }
   }
 
   @override
@@ -66,11 +72,15 @@ class _MyChatListState extends State<MyChatList> {
           },
         ),
       ),
-      backgroundColor: Colors.purpleAccent,
+      backgroundColor: Colors.black,
       body: Chat(
         messages: messages,
         onSendPressed: _handleSendPressed,
         user: user,
+        // Do something on that tap functions here
+        theme: const DefaultChatTheme(
+          backgroundColor: Colors.black,
+        ),
       ),
     );
   }
