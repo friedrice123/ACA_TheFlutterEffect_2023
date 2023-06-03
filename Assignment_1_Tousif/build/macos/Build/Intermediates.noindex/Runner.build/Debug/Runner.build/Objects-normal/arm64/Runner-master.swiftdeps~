@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "a0b157955ac2b77e40a92484574e48f749286a0ce37649fd991d9eff10a86bee"
+build_start_time: [1685776339, 915542000]
+build_end_time: [1685776339, 947735000]
+inputs:
+  "/Users/tousif/git/Flutter Project/ACA_TheFlutterEffect_2023/Assignment_1_Tousif/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1685776319, 162911712]
+  "/Users/tousif/git/Flutter Project/ACA_TheFlutterEffect_2023/Assignment_1_Tousif/macos/Runner/AppDelegate.swift": !private [1685738450, 462229684]
+  "/Users/tousif/git/Flutter Project/ACA_TheFlutterEffect_2023/Assignment_1_Tousif/macos/Runner/MainFlutterWindow.swift": !private [1685738450, 464192884]

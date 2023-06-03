@@ -1,4 +1,6 @@
-import 'package:assignment_1/NavBarPage.dart';
+import 'dart:async';
+
+import 'package:assignment_1/my_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';
@@ -35,9 +37,13 @@ class _MyChatListState extends State<MyChatList> {
 
     _addMessage(textMessage);
 
-    if (textMessage.text.toLowerCase() == 'steve' ||
-        textMessage.text.toLowerCase() == 'steve jobs') {
-      Navigator.push(context, FadeRoute(page: const NavBarPage()));
+    if (textMessage.text.toLowerCase() == 'mystery' ||
+        textMessage.text.toLowerCase() == 'tousif' ||
+        textMessage.text.toLowerCase() == 'tousif ahamad') {
+      FocusManager.instance.primaryFocus?.unfocus();
+      Timer(const Duration(milliseconds: 1000), () {
+        Navigator.push(context, FadeRoute(page: const MyPage()));
+      });
     }
   }
 
@@ -78,6 +84,7 @@ class _MyChatListState extends State<MyChatList> {
         onSendPressed: _handleSendPressed,
         user: user,
         // Do something on that tap functions here
+        onMessageLongPress: (context, p1) {},
         theme: const DefaultChatTheme(
           backgroundColor: Colors.black,
         ),
